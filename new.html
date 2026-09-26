@@ -1,0 +1,3011 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEO Learning OS — Daily SEO Checklist</title>
+
+<meta name="description"
+content="A structured daily SEO learning checklist covering technical SEO, on-page SEO, semantic SEO, entity SEO, content, local SEO, off-page SEO, analytics and advanced SEO.">
+
+<style>
+:root{
+    --bg:#07111f;
+    --panel:#0d1a2b;
+    --panel2:#101f33;
+    --card:#12243a;
+    --border:rgba(255,255,255,.09);
+    --text:#f4f7fb;
+    --muted:#91a1b7;
+    --blue:#3b82f6;
+    --cyan:#22d3ee;
+    --green:#22c55e;
+    --yellow:#f59e0b;
+    --red:#ef4444;
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 0%, rgba(59,130,246,.16), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(34,211,238,.10), transparent 25%),
+        var(--bg);
+
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(20px);
+    background:rgba(7,17,31,.78);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    max-width:1400px;
+    margin:auto;
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    color:white;
+    box-shadow:0 10px 30px rgba(59,130,246,.3);
+}
+
+.brand-text h1{
+    font-size:18px;
+    letter-spacing:-.5px;
+}
+
+.brand-text span{
+    font-size:12px;
+    color:var(--muted);
+}
+
+.nav-actions{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    border:0;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.btn{
+    padding:10px 15px;
+    border-radius:10px;
+    background:var(--panel2);
+    color:var(--text);
+    border:1px solid var(--border);
+    transition:.25s;
+}
+
+.btn:hover{
+    border-color:rgba(59,130,246,.5);
+    transform:translateY(-1px);
+}
+
+.btn.primary{
+    background:linear-gradient(135deg,var(--blue),#2563eb);
+    border-color:transparent;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    max-width:1400px;
+    margin:auto;
+    padding:55px 24px 30px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.4fr .6fr;
+    gap:25px;
+}
+
+.hero-card{
+    padding:35px;
+    border:1px solid var(--border);
+    border-radius:24px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(59,130,246,.13),
+            rgba(13,26,43,.92)
+        );
+
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    position:relative;
+}
+
+.hero-card:after{
+    content:"SEO";
+    position:absolute;
+    right:-25px;
+    bottom:-55px;
+    font-size:160px;
+    font-weight:900;
+    color:rgba(255,255,255,.025);
+}
+
+.eyebrow{
+    color:var(--cyan);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.hero h2{
+    font-size:clamp(32px,5vw,60px);
+    line-height:1;
+    letter-spacing:-2.5px;
+    max-width:800px;
+    margin-bottom:18px;
+}
+
+.hero h2 span{
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:var(--muted);
+    max-width:720px;
+    line-height:1.7;
+}
+
+.date-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    min-height:220px;
+    border-radius:24px;
+    background:var(--panel);
+    border:1px solid var(--border);
+}
+
+.date-box .day{
+    font-size:50px;
+    font-weight:900;
+}
+
+.date-box .month{
+    color:var(--cyan);
+    font-weight:700;
+}
+
+.date-box .date-text{
+    margin-top:8px;
+    color:var(--muted);
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    max-width:1400px;
+    margin:0 auto 30px;
+    padding:0 24px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.stat{
+    background:rgba(13,26,43,.85);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:20px;
+}
+
+.stat-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.stat-label{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.stat-value{
+    font-size:28px;
+    font-weight:800;
+}
+
+.progress{
+    height:7px;
+    background:#1c2d42;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    border-radius:20px;
+    transition:width .5s ease;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    max-width:1400px;
+    margin:auto;
+    padding:0 24px 80px;
+}
+
+.toolbar{
+    display:flex;
+    gap:12px;
+    justify-content:space-between;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.search{
+    flex:1;
+    min-width:250px;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    padding:14px 18px;
+    border-radius:13px;
+    border:1px solid var(--border);
+    background:var(--panel);
+    color:white;
+    outline:none;
+}
+
+.search input:focus{
+    border-color:var(--blue);
+}
+
+.filters{
+    display:flex;
+    gap:8px;
+}
+
+/* ================= MODULES ================= */
+
+.modules{
+    display:grid;
+    gap:16px;
+}
+
+.module{
+    background:rgba(13,26,43,.9);
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.module:hover{
+    border-color:rgba(59,130,246,.3);
+}
+
+.module-header{
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    cursor:pointer;
+}
+
+.module-number{
+    min-width:46px;
+    height:46px;
+    border-radius:13px;
+    display:grid;
+    place-items:center;
+    background:rgba(59,130,246,.12);
+    color:var(--cyan);
+    font-weight:800;
+}
+
+.module-title{
+    flex:1;
+}
+
+.module-title h3{
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.module-title p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.module-progress{
+    min-width:100px;
+}
+
+.module-percent{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:5px;
+    text-align:right;
+}
+
+.chevron{
+    color:var(--muted);
+    font-size:20px;
+    transition:.3s;
+}
+
+.module.open .chevron{
+    transform:rotate(180deg);
+}
+
+.module-body{
+    display:none;
+    padding:0 22px 24px;
+}
+
+.module.open .module-body{
+    display:block;
+}
+
+.topic{
+    padding:18px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.025);
+    border-radius:15px;
+    margin-top:12px;
+}
+
+.topic-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:12px;
+}
+
+.topic-title{
+    font-weight:700;
+}
+
+.topic-description{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.tasks{
+    display:grid;
+    gap:8px;
+}
+
+.task{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:11px;
+    border-radius:10px;
+    transition:.2s;
+}
+
+.task:hover{
+    background:rgba(255,255,255,.035);
+}
+
+.task input{
+    appearance:none;
+    width:19px;
+    height:19px;
+    border:1.5px solid #52647b;
+    border-radius:6px;
+    cursor:pointer;
+    flex:none;
+    margin-top:1px;
+    position:relative;
+}
+
+.task input:checked{
+    background:var(--green);
+    border-color:var(--green);
+}
+
+.task input:checked:after{
+    content:"✓";
+    position:absolute;
+    color:white;
+    font-size:13px;
+    font-weight:900;
+    left:3px;
+    top:-1px;
+}
+
+.task label{
+    color:#d7dfeb;
+    font-size:14px;
+    line-height:1.5;
+    cursor:pointer;
+}
+
+.task input:checked + label{
+    color:#74849a;
+    text-decoration:line-through;
+}
+
+/* ================= NOTES ================= */
+
+.notes{
+    margin-top:30px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+}
+
+.notes h3{
+    margin-bottom:8px;
+}
+
+.notes p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+textarea{
+    width:100%;
+    min-height:180px;
+    resize:vertical;
+    background:#091625;
+    color:white;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:15px;
+    outline:none;
+    font-family:inherit;
+    line-height:1.6;
+}
+
+textarea:focus{
+    border-color:var(--blue);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#617188;
+    font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .nav{
+        padding:12px 16px;
+    }
+
+    .brand-text{
+        display:none;
+    }
+
+    .nav-actions .btn:not(.primary){
+        display:none;
+    }
+
+    .hero{
+        padding:35px 16px 25px;
+    }
+
+    .hero-card{
+        padding:25px;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    .stats{
+        padding:0 16px;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .main{
+        padding:0 16px 60px;
+    }
+
+    .module-header{
+        padding:17px;
+    }
+
+    .module-progress{
+        display:none;
+    }
+
+    .module-body{
+        padding:0 15px 18px;
+    }
+
+    .module-title h3{
+        font-size:15px;
+    }
+
+    .date-box{
+        min-height:150px;
+    }
+
+    .date-box .day{
+        font-size:38px;
+    }
+
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.module{
+    animation:fadeUp .5s ease both;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <nav class="nav">
+
+        <div class="brand">
+
+            <div class="logo">S</div>
+
+            <div class="brand-text">
+                <h1>SEO Learning OS</h1>
+                <span>Daily SEO mastery checklist</span>
+            </div>
+
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="btn" onclick="expandAll()">
+                Expand All
+            </button>
+
+            <button class="btn" onclick="collapseAll()">
+                Collapse
+            </button>
+
+            <button class="btn primary" onclick="resetProgress()">
+                Reset
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-grid">
+
+        <div class="hero-card">
+
+            <div class="eyebrow">
+                SEO Learning System
+            </div>
+
+            <h2>
+                Build your SEO skills
+                <span>one checklist at a time.</span>
+            </h2>
+
+            <p>
+                A structured learning roadmap from SEO fundamentals
+                to Technical SEO, Semantic SEO, Entity SEO,
+                Content, Local SEO, Off-Page SEO, Analytics and
+                Advanced Search.
+            </p>
+
+        </div>
+
+
+        <div class="date-box">
+
+            <div class="day" id="dayNumber">26</div>
+
+            <div class="month" id="monthName">
+                SEPTEMBER
+            </div>
+
+            <div class="date-text">
+                Today's Learning Session
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat">
+
+        <div class="stat-top">
+            <span class="stat-label">Overall Progress</span>
+            <span class="stat-value" id="overallPercent">0%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="overallBar"></div>
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-top">
+            <span class="stat-label">Completed</span>
+            <span class="stat-value" id="completedCount">0</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="completedBar"></div>
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-top">
+            <span class="stat-label">Modules</span>
+            <span class="stat-value" id="moduleCount">11</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width:100%"></div>
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-top">
+            <span class="stat-label">Learning Status</span>
+            <span class="stat-value" id="statusText">
+                Start
+            </span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="statusBar"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <div class="toolbar">
+
+        <div class="search">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search SEO topics, tasks or modules..."
+                oninput="searchTasks()"
+            >
+
+        </div>
+
+        <div class="filters">
+
+            <button class="btn" onclick="showAll()">
+                All
+            </button>
+
+            <button class="btn" onclick="showIncomplete()">
+                Remaining
+            </button>
+
+            <button class="btn" onclick="showCompleted()">
+                Completed
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <section class="modules" id="modules">
+
+        <!-- MODULE 01 -->
+
+        <article class="module open">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">01</div>
+
+                <div class="module-title">
+
+                    <h3>Foundation</h3>
+
+                    <p>
+                        Understand how search engines and SERPs work.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Search Engine Basics
+                    </div>
+
+                    <div class="topic-description">
+                        Learn crawling, indexing, ranking and how
+                        search engines discover and understand webpages.
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t1">
+                            <label for="t1">
+                                Learn how search engines crawl websites
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t2">
+                            <label for="t2">
+                                Understand crawling vs indexing
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t3">
+                            <label for="t3">
+                                Learn the basic ranking process
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t4">
+                            <label for="t4">
+                                Understand Google Search documentation
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Search Intent
+                    </div>
+
+                    <div class="topic-description">
+                        Understand why users search and what type of
+                        result they expect.
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t5">
+                            <label for="t5">
+                                Learn informational intent
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t6">
+                            <label for="t6">
+                                Learn commercial investigation intent
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t7">
+                            <label for="t7">
+                                Learn transactional intent
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t8">
+                            <label for="t8">
+                                Analyze intent from live SERPs
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        SERP
+                    </div>
+
+                    <div class="topic-description">
+                        Study the search results page and its features.
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t9">
+                            <label for="t9">
+                                Study organic results
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t10">
+                            <label for="t10">
+                                Study featured snippets
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t11">
+                            <label for="t11">
+                                Study People Also Ask
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t12">
+                            <label for="t12">
+                                Study image, video and local results
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 02 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">02</div>
+
+                <div class="module-title">
+
+                    <h3>Keywords</h3>
+
+                    <p>
+                        Discover, classify and map search demand.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Keyword Research
+                    </div>
+
+                    <div class="topic-description">
+                        Build keyword lists using search demand,
+                        competition and relevance.
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t13">
+                            <label for="t13">
+                                Learn seed keywords
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t14">
+                            <label for="t14">
+                                Research long-tail keywords
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t15">
+                            <label for="t15">
+                                Learn search volume and competition
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t16">
+                            <label for="t16">
+                                Build a 100-keyword research sheet
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Keyword Intent & Clustering
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t17">
+                            <label for="t17">
+                                Assign intent to every keyword
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t18">
+                            <label for="t18">
+                                Group related keywords
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t19">
+                            <label for="t19">
+                                Create keyword clusters
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t20">
+                            <label for="t20">
+                                Identify primary and secondary keywords
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Keyword Mapping
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t21">
+                            <label for="t21">
+                                Map keywords to existing pages
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t22">
+                            <label for="t22">
+                                Identify keyword cannibalization
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t23">
+                            <label for="t23">
+                                Create a new-page keyword map
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 03 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">03</div>
+
+                <div class="module-title">
+
+                    <h3>Technical SEO</h3>
+
+                    <p>
+                        Make websites crawlable, indexable and technically sound.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Crawlability & Indexability
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t24">
+                            <label for="t24">
+                                Audit crawlability
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t25">
+                            <label for="t25">
+                                Audit indexability
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t26">
+                            <label for="t26">
+                                Understand noindex
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t27">
+                            <label for="t27">
+                                Understand robots.txt
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Sitemap & Canonical
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t28">
+                            <label for="t28">
+                                Create XML sitemap
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t29">
+                            <label for="t29">
+                                Submit sitemap in GSC
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t30">
+                            <label for="t30">
+                                Learn canonical URLs
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t31">
+                            <label for="t31">
+                                Find duplicate URL problems
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Technical Performance
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t32">
+                            <label for="t32">
+                                Configure HTTPS
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t33">
+                            <label for="t33">
+                                Test mobile responsiveness
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t34">
+                            <label for="t34">
+                                Understand JavaScript SEO
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t35">
+                            <label for="t35">
+                                Learn Core Web Vitals
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t36">
+                            <label for="t36">
+                                Improve page speed
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Structured Data
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t37">
+                            <label for="t37">
+                                Learn Schema.org basics
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t38">
+                            <label for="t38">
+                                Implement Organization schema
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t39">
+                            <label for="t39">
+                                Implement Breadcrumb schema
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t40">
+                            <label for="t40">
+                                Validate structured data
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 04 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">04</div>
+
+                <div class="module-title">
+
+                    <h3>On-Page SEO</h3>
+
+                    <p>
+                        Optimize pages for users and search engines.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Metadata
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t41">
+                            <label for="t41">
+                                Write unique title tags
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t42">
+                            <label for="t42">
+                                Write useful meta descriptions
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t43">
+                            <label for="t43">
+                                Optimize URL structure
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Content Structure
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t44">
+                            <label for="t44">
+                                Create one clear H1
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t45">
+                            <label for="t45">
+                                Structure H2 and H3 sections
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t46">
+                            <label for="t46">
+                                Improve content readability
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Images & Internal Links
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t47">
+                            <label for="t47">
+                                Optimize image file sizes
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t48">
+                            <label for="t48">
+                                Write useful image alt text
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t49">
+                            <label for="t49">
+                                Build internal links
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t50">
+                            <label for="t50">
+                                Optimize contextual anchor text
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 05 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">05</div>
+
+                <div class="module-title">
+
+                    <h3>Semantic SEO</h3>
+
+                    <p>
+                        Build topical depth and meaningful relationships.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Topics & Entities
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t51">
+                            <label for="t51">
+                                Identify the primary topic
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t52">
+                            <label for="t52">
+                                Identify related entities
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t53">
+                            <label for="t53">
+                                Identify semantic relationships
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Topic Clusters
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t54">
+                            <label for="t54">
+                                Create a pillar page
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t55">
+                            <label for="t55">
+                                Create supporting articles
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t56">
+                            <label for="t56">
+                                Connect cluster pages with internal links
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Topical Authority
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t57">
+                            <label for="t57">
+                                Build a topical map
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t58">
+                            <label for="t58">
+                                Find content gaps
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t59">
+                            <label for="t59">
+                                Build content depth around one subject
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 06 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">06</div>
+
+                <div class="module-title">
+
+                    <h3>Entity SEO</h3>
+
+                    <p>
+                        Build recognizable entities and relationships.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Organization & Person Entities
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t60">
+                            <label for="t60">
+                                Define organization entity information
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t61">
+                            <label for="t61">
+                                Define founder/person entity information
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t62">
+                            <label for="t62">
+                                Build consistent brand information
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Services & Locations
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t63">
+                            <label for="t63">
+                                Define service entities
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t64">
+                            <label for="t64">
+                                Define location entities
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t65">
+                            <label for="t65">
+                                Connect services with locations
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Schema & sameAs
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t66">
+                            <label for="t66">
+                                Implement Organization schema
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t67">
+                            <label for="t67">
+                                Implement Person schema where appropriate
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t68">
+                            <label for="t68">
+                                Learn sameAs properties
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t69">
+                            <label for="t69">
+                                Map entity relationships
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 07 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">07</div>
+
+                <div class="module-title">
+
+                    <h3>Content SEO</h3>
+
+                    <p>
+                        Create useful, original and trustworthy content.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Helpful Content
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t70">
+                            <label for="t70">
+                                Identify the audience
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t71">
+                            <label for="t71">
+                                Match content to search intent
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t72">
+                            <label for="t72">
+                                Improve first-hand usefulness
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        E-E-A-T
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t73">
+                            <label for="t73">
+                                Learn Experience
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t74">
+                            <label for="t74">
+                                Learn Expertise
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t75">
+                            <label for="t75">
+                                Learn Authoritativeness
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t76">
+                            <label for="t76">
+                                Learn Trust
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Advanced Content
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t77">
+                            <label for="t77">
+                                Create a case study
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t78">
+                            <label for="t78">
+                                Create a comprehensive guide
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t79">
+                            <label for="t79">
+                                Conduct original research
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 08 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">08</div>
+
+                <div class="module-title">
+
+                    <h3>Local SEO</h3>
+
+                    <p>
+                        Optimize businesses for local discovery.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Google Business Profile
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t80">
+                            <label for="t80">
+                                Create or audit Google Business Profile
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t81">
+                            <label for="t81">
+                                Optimize business categories
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t82">
+                            <label for="t82">
+                                Add business services
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        NAP & Citations
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t83">
+                            <label for="t83">
+                                Audit Name Address Phone consistency
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t84">
+                            <label for="t84">
+                                Build relevant local citations
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Reviews & Local Content
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t85">
+                            <label for="t85">
+                                Create ethical review process
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t86">
+                            <label for="t86">
+                                Create location pages
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t87">
+                            <label for="t87">
+                                Create locally relevant content
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 09 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">09</div>
+
+                <div class="module-title">
+
+                    <h3>Off-Page SEO</h3>
+
+                    <p>
+                        Build authority through links, mentions and relationships.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Backlinks
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t88">
+                            <label for="t88">
+                                Understand backlinks
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t89">
+                            <label for="t89">
+                                Analyze referring domains
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t90">
+                            <label for="t90">
+                                Identify relevant link opportunities
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Digital PR & Mentions
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t91">
+                            <label for="t91">
+                                Learn digital PR
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t92">
+                            <label for="t92">
+                                Find brand mention opportunities
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t93">
+                            <label for="t93">
+                                Build media outreach list
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Outreach
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t94">
+                            <label for="t94">
+                                Build outreach templates
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t95">
+                            <label for="t95">
+                                Research relevant websites
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 10 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">10</div>
+
+                <div class="module-title">
+
+                    <h3>Analytics</h3>
+
+                    <p>
+                        Measure organic search performance and user behaviour.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Google Search Console
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t96">
+                            <label for="t96">
+                                Configure GSC
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t97">
+                            <label for="t97">
+                                Study Performance reports
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t98">
+                            <label for="t98">
+                                Analyze queries and pages
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t99">
+                            <label for="t99">
+                                Monitor indexing
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        GA4
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t100">
+                            <label for="t100">
+                                Configure GA4
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t101">
+                            <label for="t101">
+                                Understand organic traffic
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t102">
+                            <label for="t102">
+                                Configure conversions
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        GTM & Looker Studio
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t103">
+                            <label for="t103">
+                                Configure Google Tag Manager
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t104">
+                            <label for="t104">
+                                Create useful SEO events
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t105">
+                            <label for="t105">
+                                Build an SEO Looker Studio dashboard
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MODULE 11 -->
+
+        <article class="module">
+
+            <div class="module-header" onclick="toggleModule(this)">
+
+                <div class="module-number">11</div>
+
+                <div class="module-title">
+
+                    <h3>Advanced SEO</h3>
+
+                    <p>
+                        Move into international, ecommerce and AI search.
+                    </p>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-percent">0%</div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="chevron">⌄</div>
+
+            </div>
+
+
+            <div class="module-body">
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        International SEO
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t106">
+                            <label for="t106">
+                                Learn international SEO architecture
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t107">
+                            <label for="t107">
+                                Learn hreflang
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t108">
+                            <label for="t108">
+                                Plan country/language targeting
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        Ecommerce SEO
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t109">
+                            <label for="t109">
+                                Optimize category pages
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t110">
+                            <label for="t110">
+                                Optimize product pages
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t111">
+                            <label for="t111">
+                                Learn ecommerce structured data
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t112">
+                            <label for="t112">
+                                Handle faceted navigation
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        GEO & AEO
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t113">
+                            <label for="t113">
+                                Learn Generative Engine Optimization concepts
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t114">
+                            <label for="t114">
+                                Learn Answer Engine Optimization
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t115">
+                            <label for="t115">
+                                Structure content for direct answers
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <div class="topic-title">
+                        AI Search
+                    </div>
+
+                    <div class="tasks">
+
+                        <div class="task">
+                            <input type="checkbox" id="t116">
+                            <label for="t116">
+                                Study AI-powered search experiences
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t117">
+                            <label for="t117">
+                                Study retrieval and citation concepts
+                            </label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" id="t118">
+                            <label for="t118">
+                                Analyze how brands appear in AI answers
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- NOTES -->
+
+    <section class="notes">
+
+        <h3>📝 Learning Notes</h3>
+
+        <p>
+            Write what you learned today, questions you have,
+            SEO experiments, URLs to investigate or ideas for your project.
+        </p>
+
+        <textarea
+            id="notes"
+            placeholder="Example: Today I learned the difference between crawling and indexing..."
+        ></textarea>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    SEO Learning OS · Learn → Practice → Audit → Implement → Measure
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   DATE
+========================================= */
+
+const today = new Date();
+
+document.getElementById("dayNumber").textContent =
+    today.getDate();
+
+document.getElementById("monthName").textContent =
+    today.toLocaleString("en-US", {
+        month:"long"
+    }).toUpperCase();
+
+
+/* =========================================
+   STORAGE
+========================================= */
+
+const STORAGE_KEY = "seo-learning-progress-v1";
+const NOTES_KEY = "seo-learning-notes-v1";
+
+
+function saveProgress(){
+
+    const data = {};
+
+    document.querySelectorAll(
+        '.task input[type="checkbox"]'
+    ).forEach(box => {
+
+        data[box.id] = box.checked;
+
+    });
+
+    localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(data)
+    );
+
+    updateProgress();
+}
+
+
+function loadProgress(){
+
+    const saved =
+        JSON.parse(
+            localStorage.getItem(STORAGE_KEY) || "{}"
+        );
+
+    document.querySelectorAll(
+        '.task input[type="checkbox"]'
+    ).forEach(box => {
+
+        box.checked = saved[box.id] || false;
+
+    });
+
+    document.getElementById("notes").value =
+        localStorage.getItem(NOTES_KEY) || "";
+
+    updateProgress();
+}
+
+
+function resetProgress(){
+
+    if(!confirm(
+        "Reset all SEO learning progress?"
+    )) return;
+
+    localStorage.removeItem(STORAGE_KEY);
+
+    document.querySelectorAll(
+        '.task input[type="checkbox"]'
+    ).forEach(box => {
+
+        box.checked = false;
+
+    });
+
+    updateProgress();
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+function updateProgress(){
+
+    const tasks =
+        [...document.querySelectorAll(
+            '.task input[type="checkbox"]'
+        )];
+
+    const completed =
+        tasks.filter(t => t.checked).length;
+
+    const total = tasks.length;
+
+    const percentage =
+        total === 0
+        ? 0
+        : Math.round((completed / total) * 100);
+
+    document.getElementById(
+        "overallPercent"
+    ).textContent = percentage + "%";
+
+    document.getElementById(
+        "completedCount"
+    ).textContent =
+        completed + "/" + total;
+
+    document.getElementById(
+        "overallBar"
+    ).style.width =
+        percentage + "%";
+
+    document.getElementById(
+        "completedBar"
+    ).style.width =
+        percentage + "%";
+
+
+    let status = "Start";
+
+    if(percentage >= 100){
+        status = "Mastered";
+    }
+    else if(percentage >= 75){
+        status = "Advanced";
+    }
+    else if(percentage >= 50){
+        status = "Strong";
+    }
+    else if(percentage >= 25){
+        status = "Learning";
+    }
+
+    document.getElementById(
+        "statusText"
+    ).textContent = status;
+
+    document.getElementById(
+        "statusBar"
+    ).style.width =
+        percentage + "%";
+
+
+    updateModuleProgress();
+}
+
+
+function updateModuleProgress(){
+
+    document.querySelectorAll(
+        ".module"
+    ).forEach(module => {
+
+        const tasks =
+            [...module.querySelectorAll(
+                '.task input[type="checkbox"]'
+            )];
+
+        const completed =
+            tasks.filter(t => t.checked).length;
+
+        const percentage =
+            tasks.length
+            ? Math.round(
+                completed / tasks.length * 100
+              )
+            : 0;
+
+        const percentElement =
+            module.querySelector(
+                ".module-percent"
+            );
+
+        const bar =
+            module.querySelector(
+                ".module-progress .progress-bar"
+            );
+
+        percentElement.textContent =
+            percentage + "%";
+
+        bar.style.width =
+            percentage + "%";
+
+    });
+}
+
+
+/* =========================================
+   MODULE TOGGLE
+========================================= */
+
+function toggleModule(header){
+
+    header
+        .parentElement
+        .classList
+        .toggle("open");
+
+}
+
+
+function expandAll(){
+
+    document
+        .querySelectorAll(".module")
+        .forEach(module => {
+            module.classList.add("open");
+        });
+
+}
+
+
+function collapseAll(){
+
+    document
+        .querySelectorAll(".module")
+        .forEach(module => {
+            module.classList.remove("open");
+        });
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+function searchTasks(){
+
+    const query =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    document
+        .querySelectorAll(".module")
+        .forEach(module => {
+
+            let moduleMatch = false;
+
+            module
+                .querySelectorAll(".topic")
+                .forEach(topic => {
+
+                    const text =
+                        topic.innerText
+                        .toLowerCase();
+
+                    const match =
+                        text.includes(query);
+
+                    topic.style.display =
+                        match ? "" : "none";
+
+                    if(match){
+                        moduleMatch = true;
+                    }
+
+                });
+
+            module.style.display =
+                moduleMatch || !query
+                ? ""
+                : "none";
+
+            if(query && moduleMatch){
+                module.classList.add("open");
+            }
+
+        });
+
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+function showAll(){
+
+    document
+        .querySelectorAll(".module")
+        .forEach(module => {
+
+            module.style.display = "";
+
+            module
+                .querySelectorAll(".topic")
+                .forEach(topic => {
+                    topic.style.display = "";
+                });
+
+        });
+
+}
+
+
+function showCompleted(){
+
+    document
+        .querySelectorAll(".module")
+        .forEach(module => {
+
+            let hasCompleted = false;
+
+            module
+                .querySelectorAll(".topic")
+                .forEach(topic => {
+
+                    const tasks =
+                        topic.querySelectorAll(
+                            'input[type="checkbox"]'
+                        );
+
+                    const completed =
+                        [...tasks]
+                        .filter(t => t.checked);
+
+                    if(completed.length > 0){
+                        topic.style.display = "";
+                        hasCompleted = true;
+                    }
+                    else{
+                        topic.style.display = "none";
+                    }
+
+                });
+
+            module.style.display =
+                hasCompleted ? "" : "none";
+
+        });
+
+}
+
+
+function showIncomplete(){
+
+    document
+        .querySelectorAll(".module")
+        .forEach(module => {
+
+            let hasIncomplete = false;
+
+            module
+                .querySelectorAll(".topic")
+                .forEach(topic => {
+
+                    const tasks =
+                        topic.querySelectorAll(
+                            'input[type="checkbox"]'
+                        );
+
+                    const incomplete =
+                        [...tasks]
+                        .filter(t => !t.checked);
+
+                    if(incomplete.length > 0){
+                        topic.style.display = "";
+                        hasIncomplete = true;
+                    }
+                    else{
+                        topic.style.display = "none";
+                    }
+
+                });
+
+            module.style.display =
+                hasIncomplete ? "" : "none";
+
+        });
+
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+document
+    .querySelectorAll(
+        '.task input[type="checkbox"]'
+    )
+    .forEach(box => {
+
+        box.addEventListener(
+            "change",
+            saveProgress
+        );
+
+    });
+
+
+document
+    .getElementById("notes")
+    .addEventListener(
+        "input",
+        function(){
+
+            localStorage.setItem(
+                NOTES_KEY,
+                this.value
+            );
+
+        }
+    );
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+loadProgress();
+
+</script>
+
+</body>
+</html>
+```
